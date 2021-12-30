@@ -1,0 +1,49 @@
+--- @class UIEventFeedBeastLayoutConfig
+UIEventFeedBeastLayoutConfig = Class(UIEventFeedBeastLayoutConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIEventFeedBeastLayoutConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Text
+	self.textEventDesc = self.transform:Find("text_event_desc"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textEventName = self.transform:Find("text_event_name"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textReward = self.transform:Find("reward_view/text_reward"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_LoopVerticalScrollRect
+	self.scrollReward = self.transform:Find("reward_view/scroll_reward"):GetComponent(ComponentName.UnityEngine_UI_LoopVerticalScrollRect)
+	--- @type UnityEngine_UI_Button
+	self.buttonFeed = self.transform:Find("feed_view/button_feed"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textFeed = self.transform:Find("feed_view/button_feed/text_feed"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonRewardPool = self.transform:Find("level_progress/button_reward_pool"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textLevel = self.transform:Find("level_progress/text_level"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.progressBar = self.transform:Find("level_progress/exp_progress_bar/progress_bar"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_GameObject
+	self.progressFull = self.transform:Find("level_progress/exp_progress_bar/progress_full").gameObject
+	--- @type UnityEngine_UI_Text
+	self.textProgressExp = self.transform:Find("level_progress/exp_progress_bar/text_progress_exp"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.iconMoney = self.transform:Find("feed_view/icon_money"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Text
+	self.textMoneyValue = self.transform:Find("feed_view/text_money_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_GameObject
+	self.coverFeed = self.transform:Find("feed_view/button_feed/cover_feed").gameObject
+	--- @type UnityEngine_GameObject
+	self.notification = self.transform:Find("feed_view/button_feed/notification").gameObject
+	--- @type UnityEngine_RectTransform
+	self.beastAnchor = self.transform:Find("beast_anchor"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_GameObject
+	self.feedView = self.transform:Find("feed_view").gameObject
+	--- @type UnityEngine_ParticleSystem
+	self.fxEvolve = self.transform:Find("beast_anchor/fx_ui_beast_autumn_evolve/aura_mesh_light"):GetComponent(ComponentName.UnityEngine_ParticleSystem)
+	--- @type UnityEngine_ParticleSystem
+	self.fxLevelUp = self.transform:Find("beast_anchor/fx_ui_beast_autumn_levelup/aura_mesh_light"):GetComponent(ComponentName.UnityEngine_ParticleSystem)
+end

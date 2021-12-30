@@ -1,0 +1,63 @@
+--- @class UIMarketConfig
+UIMarketConfig = Class(UIMarketConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIMarketConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_RectTransform
+	self.moneyBarAnchor = self.transform:Find("safe_area/anchor_top/money_anchor"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.buttonBack = self.transform:Find("safe_area/back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonTutorial = self.transform:Find("safe_area/anchor_top/button_tutorial"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.gridItemAnchor = self.transform:Find("shop_layout/grid_item_anchor"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.buttonArrowLeft = self.transform:Find("shop_layout/button_left"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonArrowRight = self.transform:Find("shop_layout/button_right"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.pageMarket = self.transform:Find("shop_layout/page_market"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.refreshButton = self.transform:Find("container_shop_info/refresh_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.refreshPrice = self.transform:Find("container_shop_info/refresh_button/coin_currency/text_coin_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.buttonTabAnchor = self.transform:Find("shop_layout/tab"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.localizeRefresh = self.transform:Find("container_shop_info/refresh_button/text_forge"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.iconCoinRefresh = self.transform:Find("container_shop_info/refresh_button/coin_currency/icon_ancient_relic"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_RectTransform
+	self.safeArea = self.transform:Find("safe_area"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.textTimer = self.transform:Find("container_shop_info/timer"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_GameObject
+	self.empty = self.transform:Find("shop_layout/empty").gameObject
+	--- @type UnityEngine_UI_Text
+	self.textEmpty = self.transform:Find("shop_layout/empty/text_empty"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.processText = self.transform:Find("container_shop_info/ugrading_process/can_upgrade/process_text"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.modeShopLevel = self.transform:Find("container_shop_info/ugrading_process/can_upgrade/mode_shop_level"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.fillAmountLevel = self.transform:Find("container_shop_info/ugrading_process/can_upgrade/fill_container/fill_amount"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Button
+	self.upgradeLevelBtn = self.transform:Find("container_shop_info/ugrading_process/can_upgrade/upgrade_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_GameObject
+	self.ugradingProcess = self.transform:Find("container_shop_info/ugrading_process").gameObject
+	--- @type UnityEngine_UI_Text
+	self.cantUpgrade = self.transform:Find("container_shop_info/ugrading_process/cant_upgrade"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.canUpgrade = self.transform:Find("container_shop_info/ugrading_process/can_upgrade"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_GameObject
+	self.animUpgrade = self.transform:Find("container_shop_info/ugrading_process/can_upgrade/fx_tarven_startfill").gameObject
+	--- @type UnityEngine_RectTransform
+	self.shopLayout = self.transform:Find("shop_layout"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_GameObject
+	self.loading = self.transform:Find("shop_layout/loading").gameObject
+end

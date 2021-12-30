@@ -1,0 +1,75 @@
+--- @class UIWheelOfFateConfig
+UIWheelOfFateConfig = Class(UIWheelOfFateConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIWheelOfFateConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonBack = self.transform:Find("safe_area/back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonTutorial = self.transform:Find("safe_area/anchor_top/bg_button_help"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonRefresh = self.transform:Find("safe_area/anchor_bottom/refresh_button/refresh_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonRefresh2 = self.transform:Find("safe_area/anchor_bottom/refresh_button/refresh_button (1)"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonSpin1 = self.transform:Find("safe_area/anchor_bottom/spin_1_time"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonSpin10 = self.transform:Find("safe_area/anchor_bottom/spin_10_time"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Image
+	self.iconLuckyRune1 = self.transform:Find("safe_area/anchor_bottom/spin_1_time/icon_wood"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.iconLuckyRune10 = self.transform:Find("safe_area/anchor_bottom/spin_10_time/icon_wood"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Text
+	self.textNumberRune1 = self.transform:Find("safe_area/anchor_bottom/spin_1_time/icon_wood/text_price_replace"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textNumberRune10 = self.transform:Find("safe_area/anchor_bottom/spin_10_time/icon_wood/text_price_replace"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textTimeRefresh = self.transform:Find("safe_area/anchor_bottom/refresh_button/text_time_refresh"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textNumberGemReset = self.transform:Find("safe_area/anchor_bottom/refresh_button/refresh_button/icon_wood/text_price_replace"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.text1Spin = self.transform:Find("safe_area/anchor_bottom/spin_1_time/text_summon"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.text10Spin = self.transform:Find("safe_area/anchor_bottom/spin_10_time/text_summon"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.spin = self.transform:Find("icon_wheel_of_fate_1"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_GameObject
+	self.gemRefresh = self.transform:Find("safe_area/anchor_bottom/refresh_button/refresh_button/icon_wood").gameObject
+	--- @type UnityEngine_UI_Text
+	self.textFreeCount = self.transform:Find("safe_area/anchor_bottom/refresh_button/refresh_button/icon_wood/text_price_replace"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textGemPrice = self.transform:Find("safe_area/anchor_bottom/refresh_button/refresh_button/icon_wood/text_price_replace"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.casinoRoot = self.transform:Find("safe_area/anchor_top/casinoRoot"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_GameObject
+	self.arrowBasic = self.transform:Find("arrow/basic").gameObject
+	--- @type UnityEngine_GameObject
+	self.arrowPremium = self.transform:Find("arrow/premium").gameObject
+	--- @type UnityEngine_RectTransform
+	self.fxCasinoActive = self.transform:Find("arrow/fx_casino_active"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.fxCasinoReset = self.transform:Find("arrow/fx_casino_reset"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.localizeSpin1 = self.transform:Find("safe_area/anchor_bottom/spin_1_time/text_summon"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeSpin10 = self.transform:Find("safe_area/anchor_bottom/spin_10_time/text_summon"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeRefreshFree = self.transform:Find("safe_area/anchor_bottom/refresh_button/refresh_button (1)/text_summon"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeRefreshGem = self.transform:Find("safe_area/anchor_bottom/refresh_button/refresh_button/text_summon"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeNextRefresh = self.transform:Find("safe_area/anchor_bottom/refresh_button/text_time_refresh/text_refresh"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeStore = self.transform:Find("safe_area/anchor_top/bg_button_shop/text_record"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.safeArea = self.transform:Find("safe_area"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.textForceRefresh = self.transform:Find("text_force_refresh"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_Transform
+	self.previewCasino = self.transform:Find("preview_casino")
+end

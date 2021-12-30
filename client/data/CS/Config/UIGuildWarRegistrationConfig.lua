@@ -1,0 +1,51 @@
+--- @class UIGuildWarRegistrationConfig
+UIGuildWarRegistrationConfig = Class(UIGuildWarRegistrationConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIGuildWarRegistrationConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.backButton = self.transform:Find("back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textTitle = self.transform:Find("anchor_top/text_title"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textPhaseTimer = self.transform:Find("anchor_top/phase_timer"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonChangeFormation = self.transform:Find("member_view/button_change_formation"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.localizeChangeFormation = self.transform:Find("member_view/button_change_formation/text_change"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.iconGuild = self.transform:Find("member_view/guild_flag/icon_guild"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Text
+	self.guildName = self.transform:Find("member_view/guild_flag/guild_name"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.registrationCount = self.transform:Find("member_view/guild_flag/registration_count"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonInfo = self.transform:Find("member_view/button_info"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_LoopVerticalScrollRect
+	self.scrollMember = self.transform:Find("member_view/scroll"):GetComponent(ComponentName.UnityEngine_UI_LoopVerticalScrollRect)
+	--- @type UnityEngine_UI_Text
+	self.guildLeaderBenefit = self.transform:Find("member_view/guild_leader_benefit"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizePhaseMessage = self.transform:Find("anchor_bottom/phase_message"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textMessageTittle = self.transform:Find("anchor_bottom/text_message_tittle"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonLeaderboard = self.transform:Find("member_view/button_leaderboard"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonCheckOutDefender = self.transform:Find("member_view/button_check_out_defender"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textCheckOutDefender = self.transform:Find("member_view/button_check_out_defender/text_check_out_defender"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type Spine_Unity_SkeletonGraphic
+	self.npc = self.transform:Find("back_ground/npc"):GetComponent(ComponentName.Spine_Unity_SkeletonGraphic)
+	--- @type UnityEngine_UI_Image
+	self.backGround = self.transform:Find("back_ground"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_GameObject
+	self.empty = self.transform:Find("member_view/empty").gameObject
+	--- @type UnityEngine_UI_Text
+	self.textEmpty = self.transform:Find("member_view/empty/text_empty"):GetComponent(ComponentName.UnityEngine_UI_Text)
+end

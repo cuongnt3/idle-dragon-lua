@@ -1,0 +1,67 @@
+--- @class UIGuildApplyConfig
+UIGuildApplyConfig = Class(UIGuildApplyConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIGuildApplyConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonRefresh = self.transform:Find("top_right_panel/search/button_refresh"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonSearch = self.transform:Find("top_right_panel/search/button_search"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonFound = self.transform:Find("left_panel/button_found"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_InputField
+	self.searchInput = self.transform:Find("top_right_panel/search/search_input"):GetComponent(ComponentName.UnityEngine_UI_InputField)
+	--- @type UnityEngine_UI_Button
+	self.buttonBack = self.transform:Find("back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_LoopVerticalScrollRect
+	self.listGuildScroll = self.transform:Find("top_right_panel/list_guild_scroll"):GetComponent(ComponentName.UnityEngine_UI_LoopVerticalScrollRect)
+	--- @type UnityEngine_UI_Image
+	self.iconCurrency = self.transform:Find("left_panel/button_found/icon_currency"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Text
+	self.textPrice = self.transform:Find("left_panel/button_found/text_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.toggleSearch = self.transform:Find("top_right_panel/search/toggle_search"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.toggleLabel = self.transform:Find("top_right_panel/search/toggle_search/text_search"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textTitle = self.transform:Find("bg_guild_header_holder/text_title"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeSearch = self.transform:Find("top_right_panel/search/button_search/text_search"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeFound = self.transform:Find("left_panel/button_found/text_found"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeEnterGuildName = self.transform:Find("top_right_panel/search/search_input/Placeholder"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeGuildContent = self.transform:Find("left_panel/text_guild_foundation_content"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_GameObject
+	self.searchOption = self.transform:Find("top_right_panel/search/search_option").gameObject
+	--- @type UnityEngine_UI_Button
+	self.optName = self.transform:Find("top_right_panel/search/search_option/opt_name"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.optId = self.transform:Find("top_right_panel/search/search_option/opt_id"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonGuildShop = self.transform:Find("button_guild_shop"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonHelp = self.transform:Find("button_help"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Image
+	self.bg = self.transform:Find("bg"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Text
+	self.localizeInvite = self.transform:Find("top_right_panel/search/button_invite/text_invite"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeName = self.transform:Find("top_right_panel/search/search_option/opt_name"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeId = self.transform:Find("top_right_panel/search/search_option/opt_id"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.iconGuild = self.transform:Find("left_panel/icon_guild_foundation_board/icon_guild_shield_foundation_logo/icon_guild"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_GameObject
+	self.notifyGuildShop = self.transform:Find("button_guild_shop/notify_guild_shop").gameObject
+	--- @type UnityEngine_GameObject
+	self.empty = self.transform:Find("top_right_panel/empty").gameObject
+	--- @type UnityEngine_UI_Text
+	self.textEmpty = self.transform:Find("top_right_panel/empty/text_empty"):GetComponent(ComponentName.UnityEngine_UI_Text)
+end

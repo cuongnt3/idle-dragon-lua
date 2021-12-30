@@ -1,0 +1,57 @@
+--- @class MainAreaWorldConfig
+MainAreaWorldConfig = Class(MainAreaWorldConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function MainAreaWorldConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_Transform
+	self.camera = self.transform:Find("camera")
+	--- @type UnityEngine_RectTransform
+	self.guild = self.transform:Find("layer_2/group_building/scroll_view/viewport/guild"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.campaign = self.transform:Find("layer_2/group_building/scroll_view/viewport/campaign"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_GameObject
+	self.softTutCampaign = self.transform:Find("layer_2/group_building/scroll_view/viewport/campaign/soft_tut").gameObject
+	--- @type UnityEngine_RectTransform
+	self.arena = self.transform:Find("layer_2/group_building/scroll_view/viewport/arena"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.blacksmith = self.transform:Find("layer_2/group_building/scroll_view/viewport/blacksmith"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.prophetSummon = self.transform:Find("layer_2/group_building/scroll_view/viewport/prophet_summon"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.casino = self.transform:Find("layer_2/group_building/scroll_view/viewport/casino"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.tavern = self.transform:Find("layer_2/group_building/scroll_view/viewport/tavern"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.blackmarket = self.transform:Find("layer_2/group_building/scroll_view/viewport/blackmarket"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.summonCircle = self.transform:Find("layer_2/group_building/scroll_view/viewport/summon_circle"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.aspen = self.transform:Find("layer_2/group_building/scroll_view/viewport/aspen"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.content = self.transform:Find("layer_2/group_building/scroll_view/viewport/Content"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_Transform
+	self.camTrans = self.transform:Find("camera")
+	--- @type UnityEngine_EventSystems_EventTrigger
+	self.viewport_event_trigger = self.transform:Find("layer_2/group_building/scroll_view/viewport"):GetComponent(ComponentName.UnityEngine_EventSystems_EventTrigger)
+	--- @type UnityEngine_RectTransform
+	self.raid = self.transform:Find("layer_2/group_building/scroll_view/viewport/raid"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.tower = self.transform:Find("layer_2/group_building/scroll_view/viewport/tower"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_GameObject
+	self.softTutTower = self.transform:Find("layer_2/group_building/scroll_view/viewport/tower/soft_tut").gameObject
+	--- @type UnityEngine_GameObject
+	self.arenaSeasonTimer = self.transform:Find("layer_2/group_building/scroll_view/viewport/arena/arena_season_timer").gameObject
+	--- @type UnityEngine_UI_Text
+	self.arenaTimer = self.transform:Find("layer_2/group_building/scroll_view/viewport/arena/arena_season_timer/arena_timer"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.mission = self.transform:Find("layer_2/group_building/scroll_view/viewport/mission"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.defense = self.transform:Find("layer_2/group_building/scroll_view/viewport/defense"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.domains = self.transform:Find("layer_2/group_building/scroll_view/viewport/domains"):GetComponent(ComponentName.UnityEngine_RectTransform)
+end

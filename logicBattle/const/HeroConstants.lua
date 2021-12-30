@@ -1,0 +1,36 @@
+--- @class HeroConstants
+HeroConstants = {
+    AWAKENING_STAR = 6,
+    MAX_STAR = 13,
+
+    DEFAULT_HERO_POWER = 50,
+    DEFAULT_SUMMONER_POWER = 0,
+
+    MAX_HERO_POWER = 100,
+    MAX_SUMMONER_POWER = 500,
+
+    SUMMONER_NOVICE_ID = 0,
+    SUMMONER_DUMMY_ID = -1,
+    DEFAULT_SUMMONER_STAR = 3,
+
+    NUMBER_ACTION_GAIN_POWER = 2,
+
+    FACTION_BONUS_DAMAGE = 0.2,
+    FACTION_BONUS_ACCURACY = 0.15,
+
+    NUMBER_FACTION = 6,
+    NUMBER_HERO_CLASS = 5,
+
+    ABYSS_NERO_ID = 30003,
+
+    SUMMONER_SKILL_TIER_1 = 7,
+    SUMMONER_SKILL_TIER_2 = 11,
+    SUMMONER_SKILL_TIER_3 = 12,
+
+    HERO_HIDE_SKIN_SLOT = 100,
+
+    --- delta of id between hero of different factions
+    FACTION_HERO_ID_DELTA = 10000,
+}
+
+return HeroConstants

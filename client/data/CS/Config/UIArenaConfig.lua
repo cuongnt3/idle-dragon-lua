@@ -1,0 +1,61 @@
+--- @class UIArenaConfig
+UIArenaConfig = Class(UIArenaConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIArenaConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_LoopVerticalScrollRect
+	self.scroll = self.transform:Find("VerticalScroll"):GetComponent(ComponentName.UnityEngine_UI_LoopVerticalScrollRect)
+	--- @type UnityEngine_RectTransform
+	self.tab = self.transform:Find("season_ranking_group_ranking_tab"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Image
+	self.iconRankArena = self.transform:Find("icon_arena_flag/icon_ranking_demo"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Text
+	self.textRanking = self.transform:Find("icon_arena_flag/text_ranking"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textSeasonEnd = self.transform:Find("icon_arena_flag/text_season_end"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textPoint = self.transform:Find("icon_arena_flag/text_point"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonBattle = self.transform:Find("icon_arena_flag/battle_button/bg_button_green"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonDefense = self.transform:Find("icon_arena_flag/button/defense_button/icon_defense"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonRecord = self.transform:Find("icon_arena_flag/button/record_button/icon_record"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonStore = self.transform:Find("safe_area/anchor_top/icon_shop_chung"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonReward = self.transform:Find("icon_arena_flag/button/reward_button/icon_reward"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.moneyBarInfo = self.transform:Find("icon_arena_flag/money_bar_info"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.buttonBack = self.transform:Find("back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonHelp = self.transform:Find("safe_area/anchor_top/icon_?"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.titleArena = self.transform:Find("text_title"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeSeasonRanking = self.transform:Find("season_ranking_group_ranking_tab/group_ranking_tab/text_season_ranking"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeGroupRanking = self.transform:Find("season_ranking_group_ranking_tab/season_ranking_tab/text_group_ranking"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeBattle = self.transform:Find("icon_arena_flag/battle_button/bg_button_green/text_battle"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeDefense = self.transform:Find("icon_arena_flag/button/defense_button/text_defense"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeRecord = self.transform:Find("icon_arena_flag/button/record_button/text_record"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeReward = self.transform:Find("icon_arena_flag/button/reward_button/text_reward"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.safeArea = self.transform:Find("safe_area"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Image
+	self.backGround = self.transform:Find("back_ground"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_GameObject
+	self.notiBattle = self.transform:Find("icon_arena_flag/battle_button/bg_button_green/noti").gameObject
+	--- @type UnityEngine_UI_Text
+	self.timeStamina = self.transform:Find("icon_arena_flag/time_stamina"):GetComponent(ComponentName.UnityEngine_UI_Text)
+end

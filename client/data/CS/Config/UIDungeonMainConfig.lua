@@ -1,0 +1,63 @@
+--- @class UIDungeonMainConfig
+UIDungeonMainConfig = Class(UIDungeonMainConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIDungeonMainConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonTutorial = self.transform:Find("safe_area/anchor_top/button_info"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonLeaderBoard = self.transform:Find("safe_area/anchor_top/button_leaderboard"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonBack = self.transform:Find("back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textWave = self.transform:Find("safe_area/anchor_top/text_wave"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textTimeEnd = self.transform:Find("safe_area/anchor_top/text_will_end_in"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.heroList = self.transform:Find("safe_area/anchor_left/hero_list"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.buttonEnemyInfo = self.transform:Find("button_enemy"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Image
+	self.iconTick = self.transform:Find("safe_area/anchor_bottom/normal_battle/icon_tick_slot_2/icon_tick"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Button
+	self.buttonTick = self.transform:Find("safe_area/anchor_bottom/normal_battle/icon_tick_slot_2"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textQuick = self.transform:Find("safe_area/anchor_bottom/normal_battle/icon_tick_slot_2/text_quick"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonBattle = self.transform:Find("safe_area/anchor_bottom/normal_battle/button_battle"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textBattle = self.transform:Find("safe_area/anchor_bottom/normal_battle/button_battle/text_battle"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textWave1 = self.transform:Find("safe_area/anchor_bottom/timeline_wave/icon_dungeon_timeline_track_1/text_wave_1"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textWave2 = self.transform:Find("safe_area/anchor_bottom/timeline_wave/icon_dungeon_timeline_track_2/text_wave_2"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textWave3 = self.transform:Find("safe_area/anchor_bottom/timeline_wave/icon_dungeon_timeline_track_3/text_wave_3"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.arrow = self.transform:Find("safe_area/anchor_left/arrow/arrow"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.dot = self.transform:Find("safe_area/anchor_bottom/timeline_wave/dot"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.safeArea = self.transform:Find("safe_area"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.bgDungeonTimelineBar = self.transform:Find("safe_area/anchor_bottom/timeline_wave/bg_dungeon_timeline_bar"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.buttonMerchant = self.transform:Find("safe_area/anchor_right/button_merchant"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textMerchant = self.transform:Find("safe_area/anchor_right/button_merchant/text_merchant"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonCollectionBag = self.transform:Find("safe_area/anchor_right/button_collection_bag"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textCollectionBag = self.transform:Find("safe_area/anchor_right/button_collection_bag/text_collection_bag"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonPotion = self.transform:Find("safe_area/anchor_right/button_potion"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textPotion = self.transform:Find("safe_area/anchor_right/button_potion/text_potion"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_GameObject
+	self.notifyShop = self.transform:Find("safe_area/anchor_right/button_merchant/merchant_noti_icon").gameObject
+end

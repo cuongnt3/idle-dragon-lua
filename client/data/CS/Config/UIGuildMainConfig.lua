@@ -1,0 +1,63 @@
+--- @class UIGuildMainConfig
+UIGuildMainConfig = Class(UIGuildMainConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIGuildMainConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonLog = self.transform:Find("left_panel/button_log"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonSetting = self.transform:Find("left_panel/button_setting"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textGuildName = self.transform:Find("left_panel/text_guild_name"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textGuildId = self.transform:Find("left_panel/text_guild_id"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textMember = self.transform:Find("right_panel/text_member"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textLevelValue = self.transform:Find("left_panel/text_level_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.expSlider = self.transform:Find("left_panel/exp_slider/exp_progress"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Button
+	self.buttonCheckin = self.transform:Find("left_panel/button_check_in"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonRecruit = self.transform:Find("right_panel/bottom/button_recruit"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_LoopVerticalScrollRect
+	self.memberScroll = self.transform:Find("right_panel/member_scroll"):GetComponent(ComponentName.UnityEngine_UI_LoopVerticalScrollRect)
+	--- @type UnityEngine_UI_Button
+	self.buttonBack = self.transform:Find("safe_area/back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.guildSubscription = self.transform:Find("left_panel/guild_subscription"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonApplication = self.transform:Find("right_panel/bottom/button_application"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textTitle = self.transform:Find("bg_guild_header_holder/text_title"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeCheckin = self.transform:Find("left_panel/button_check_in/text_check_in"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeApplication = self.transform:Find("right_panel/bottom/button_application/text_mail"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeRecruit = self.transform:Find("right_panel/bottom/button_recruit/text_recruit"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textExp = self.transform:Find("left_panel/exp_slider/text_exp"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonGuildShop = self.transform:Find("safe_area/anchor_top/button_guild_shop"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Image
+	self.iconLogo = self.transform:Find("left_panel/icon_guild_foundation_board/icon_guild_shield_foundation_logo/icon_guild"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_RectTransform
+	self.safeArea = self.transform:Find("safe_area"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Image
+	self.bg = self.transform:Find("bg"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Button
+	self.buttonHelp = self.transform:Find("safe_area/anchor_top/button_help"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_GameObject
+	self.notiApplications = self.transform:Find("right_panel/bottom/button_application/noti_applications").gameObject
+	--- @type UnityEngine_GameObject
+	self.notifyLog = self.transform:Find("left_panel/button_log/notify_log").gameObject
+	--- @type UnityEngine_UI_Text
+	self.textLevel = self.transform:Find("left_panel/icon_guild_foundation_board/text_level"):GetComponent(ComponentName.UnityEngine_UI_Text)
+end

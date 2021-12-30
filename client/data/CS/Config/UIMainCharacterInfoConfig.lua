@@ -1,0 +1,49 @@
+--- @class UIMainCharacterInfoConfig
+UIMainCharacterInfoConfig = Class(UIMainCharacterInfoConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIMainCharacterInfoConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Text
+	self.textAp = self.transform:Find("prefab_hero_Info/ap/text_ap_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textLevelCharacter = self.transform:Find("group_1/lv_ap_lv_to_max/character_level/text_level"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.star = self.transform:Find("prefab_hero_Info/star"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.iconFaction = self.transform:Find("prefab_hero_Info/group_2/assasins_class/text_class_name/icon_assasins"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Text
+	self.textFaction = self.transform:Find("prefab_hero_Info/group_2/assasins_class/text_class_name"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textAtk = self.transform:Find("prefab_hero_Info/group_2/heatlh/text_health"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textSkillDamage = self.transform:Find("prefab_hero_Info/group_2/attack/text_attack"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textPureDamage = self.transform:Find("prefab_hero_Info/group_2/attack_speed/text_attack_speed"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textCritDamage = self.transform:Find("prefab_hero_Info/group_2/amor/text_amor"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.skillParent = self.transform:Find("prefab_hero_Info/group_2/hero_skill"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.previewSkill = self.transform:Find("prefab_hero_Info/preview_skill"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.textLevel = self.transform:Find("prefab_hero_Info/Text"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeExp = self.transform:Find("group_1/coin/text_coin_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeAtk = self.transform:Find("prefab_hero_Info/group_2/heatlh/atk"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizePureDmg = self.transform:Find("prefab_hero_Info/group_2/amor/pure_dmg"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeSkillDmg = self.transform:Find("prefab_hero_Info/group_2/attack/skill_dmg"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeCritDmg = self.transform:Find("prefab_hero_Info/group_2/attack_speed/crit_dmg"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.autoTimeBar = self.transform:Find("group_1/coin/auto_time_bar"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.buttonInfo = self.transform:Find("prefab_hero_Info/button_info"):GetComponent(ComponentName.UnityEngine_UI_Button)
+end

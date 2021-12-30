@@ -1,0 +1,67 @@
+--- @class UIUpgradeArtifactConfig
+UIUpgradeArtifactConfig = Class(UIUpgradeArtifactConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIUpgradeArtifactConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonClose = self.transform:Find("button_close"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.itemEquipInfo1 = self.transform:Find("popup/back_ground/group_1/upgrade_artifact_group/artifact_slots"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.buttonAutoSelect = self.transform:Find("popup/back_ground/group_1/when_upgrade_popup/bg_main_pannel_1/button/auto_select_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textProcess = self.transform:Find("popup/back_ground/group_1/upgrade_artifact_group/artfact_material_progress_bar_value/text_material_upgrade_choosen_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.imageProcess = self.transform:Find("popup/back_ground/group_1/upgrade_artifact_group/artfact_material_progress_bar_value/bg_artifact_progress_bar_1"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.imageProcessFull = self.transform:Find("popup/back_ground/group_1/upgrade_artifact_group/artfact_material_progress_bar_value/bg_artifact_progress_bar_2"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Button
+	self.buttonLevelup = self.transform:Find("popup/back_ground/group_1/when_upgrade_popup/bg_main_pannel_1/button/levelup_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.parentSlotMaterial = self.transform:Find("popup/back_ground/group_1/upgrade_artifact_group/artifact_material_choosen_slot"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_LoopHorizontalScrollRect
+	self.scroll = self.transform:Find("group_2/scroll"):GetComponent(ComponentName.UnityEngine_UI_LoopHorizontalScrollRect)
+	--- @type UnityEngine_RectTransform
+	self.fxProcess = self.transform:Find("popup/back_ground/group_1/upgrade_artifact_group/fxui_upgrade_artifact100"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.fxItem = self.transform:Find("popup/back_ground/group_1/upgrade_artifact_group/fx_icon_upartifact"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.fxLevelUp = self.transform:Find("popup/back_ground/group_1/upgrade_artifact_group/fxui_upgrade_artifact_icon"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.textTitle = self.transform:Find("popup/back_ground/group_1/upgrade_artifact_group/upgrade_artifact_title/text_title"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeAutoFill = self.transform:Find("popup/back_ground/group_1/when_upgrade_popup/bg_main_pannel_1/button/auto_select_button/text_auto_select"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeLevelUp = self.transform:Find("popup/back_ground/group_1/when_upgrade_popup/bg_main_pannel_1/button/levelup_button/text_level_up"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeSelectMaterial = self.transform:Find("group_2/text_select_material"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_GameObject
+	self.bgClose = self.transform:Find("bg_close").gameObject
+	--- @type UnityEngine_UI_Text
+	self.textWhenUpgrade = self.transform:Find("popup/back_ground/group_1/when_upgrade_popup/bg_main_pannel_1/when_upgrade_title/text_when_upgrade"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.stat = self.transform:Find("popup/back_ground/group_1/when_upgrade_popup/bg_main_pannel_1/stat"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.statBonus = self.transform:Find("popup/back_ground/group_1/when_upgrade_popup/bg_main_pannel_1/statBonus"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.textBonus = self.transform:Find("popup/back_ground/group_1/when_upgrade_popup/bg_main_pannel_1/text_Bonus"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.viewItem = self.transform:Find("popup/back_ground/group_1/when_upgrade_popup"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.backButton = self.transform:Find("back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.sortButton = self.transform:Find("sort/sort_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonCloseFilter = self.transform:Find("sort/sort_slide/button_close_filter"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.sortPopup = self.transform:Find("sort/sort_slide/rarity_artifact_filter/rarity"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_GameObject
+	self.selectRarity = self.transform:Find("sort/sort_slide/rarity_artifact_filter/select").gameObject
+	--- @type UnityEngine_GameObject
+	self.sortObject = self.transform:Find("sort/sort_slide").gameObject
+end

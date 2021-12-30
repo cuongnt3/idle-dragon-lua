@@ -1,0 +1,61 @@
+--- @class UIEventLunarBossConfig
+UIEventLunarBossConfig = Class(UIEventLunarBossConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIEventLunarBossConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Text
+	self.textButton = self.transform:Find("button_challenge/text_go"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textTicket = self.transform:Find("button_challenge/currency_prize_slot/text_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.reward = self.transform:Find("reward"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.buttonHelp = self.transform:Find("boss_information/icon_battle_log"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonRanking = self.transform:Find("boss_information/icon_leaderboard"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonChallenge = self.transform:Find("button_challenge"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_RawImage
+	self.iconHero = self.transform:Find("icon_boss"):GetComponent(ComponentName.UnityEngine_UI_RawImage)
+	--- @type UnityEngine_UI_Image
+	self.factionIcon = self.transform:Find("boss_name_race/hero_name_txt/faction_icon"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Text
+	self.heroNameTxt = self.transform:Find("boss_name_race/hero_name_txt"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.bgBossHpBar = self.transform:Find("boss_information/boss_hp_bar/bg_boss_hp_bar"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Text
+	self.textBossHpValue = self.transform:Find("boss_information/boss_hp_bar/text_boss_hp_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textSelfDamage = self.transform:Find("self_damage_lunar_boss/text_self_damage"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textSelfDamageValue = self.transform:Find("self_damage_lunar_boss/text_self_damage_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textGuildDamage = self.transform:Find("guild_damage_lunar_boss/text_self_damage"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textGuildDamageValue = self.transform:Find("guild_damage_lunar_boss/text_self_damage_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.progressBar = self.transform:Find("boss_timeline/event_point_progress_bar/bg_apple_progress_bar_1"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Text
+	self.textHp = self.transform:Find("boss_information/boss_hp_bar/text_boss_hp_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.layerBossChapter = self.transform:Find("boss_timeline/event_current_point/layer"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.iconArrow = self.transform:Find("icon_arrow"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.iconArrowBack = self.transform:Find("icon_arrow_back"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonBackCurrentBoss = self.transform:Find("button_back_current_boss"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textBackCurrentBoss = self.transform:Find("button_back_current_boss/text_go"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.moneyBar = self.transform:Find("money_bar"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.textGuildPoint = self.transform:Find("boss_timeline/event_current_point/layer/boss_lunar_chapter/text_firework_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.selectBoss = self.transform:Find("current_chapter"):GetComponent(ComponentName.UnityEngine_RectTransform)
+end

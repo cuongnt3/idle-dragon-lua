@@ -1,0 +1,57 @@
+--- @class UIGuildFoundationConfig
+UIGuildFoundationConfig = Class(UIGuildFoundationConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIGuildFoundationConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonFound = self.transform:Find("popup/right_pannel/button_found"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.cancelButton = self.transform:Find("popup/right_pannel/cancel_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonChangeAvatar = self.transform:Find("popup/left_pannel/button_change_avatar"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonClose = self.transform:Find("popup/button_close"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_InputField
+	self.inputName = self.transform:Find("popup/right_pannel/name_text_box/input_name"):GetComponent(ComponentName.UnityEngine_UI_InputField)
+	--- @type UnityEngine_UI_InputField
+	self.inputInfo = self.transform:Find("popup/right_pannel/info_text_box/input_info"):GetComponent(ComponentName.UnityEngine_UI_InputField)
+	--- @type UnityEngine_UI_Text
+	self.textPrice = self.transform:Find("popup/right_pannel/button_found/text_price"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.iconCurrency = self.transform:Find("popup/right_pannel/button_found/icon_currency"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Text
+	self.textTittle = self.transform:Find("popup/tittle/text_title"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonUpdate = self.transform:Find("popup/right_pannel/button_update"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.localizeChange = self.transform:Find("popup/left_pannel/button_change_avatar/text_change"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeEnterGuildName = self.transform:Find("popup/right_pannel/name_text_box/input_name/Placeholder"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeEnterGuildInfo = self.transform:Find("popup/right_pannel/info_text_box/input_info/Placeholder"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeCancel = self.transform:Find("popup/right_pannel/cancel_button/text_cancel"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeUpdate = self.transform:Find("popup/right_pannel/button_update/text_cancel"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeFound = self.transform:Find("popup/right_pannel/button_found/text_found"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.iconGuild = self.transform:Find("popup/left_pannel/bg/icon_guild"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Text
+	self.localizeExitGuild = self.transform:Find("popup/right_pannel/button_exit_guild/text_exit"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.bgClose = self.transform:Find("bg_close"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonChangeLeader = self.transform:Find("popup/right_pannel/button_change_leader"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.localizeChangeLeader = self.transform:Find("popup/right_pannel/button_change_leader/text_change_leader"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonExitGuild = self.transform:Find("popup/right_pannel/button_exit_guild"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.rectInputName = self.transform:Find("popup/right_pannel/name_text_box/input_name"):GetComponent(ComponentName.UnityEngine_RectTransform)
+end

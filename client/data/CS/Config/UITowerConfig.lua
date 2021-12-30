@@ -1,0 +1,55 @@
+--- @class UITowerConfig
+UITowerConfig = Class(UITowerConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UITowerConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonBack = self.transform:Find("safe_area/back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonRank = self.transform:Find("safe_area/anchor_top/button_rank"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonHelp = self.transform:Find("safe_area/anchor_top/button_help"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.currencyBar = self.transform:Find("safe_area/anchor_top/tower_stamina_root"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.textTime = self.transform:Find("safe_area/anchor_top/tower_stamina_root/text_time"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.battleButton = self.transform:Find("popup/battle_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textFloorTitle = self.transform:Find("popup/text_floor_title"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.safeArea = self.transform:Find("safe_area"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.defenderTeamAnchor = self.transform:Find("popup/defender_team_anchor"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.rewardAnchor = self.transform:Find("popup/reward_anchor"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.recordButton = self.transform:Find("popup/record_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textCp = self.transform:Find("popup/cp/text_cp"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_ScrollRect
+	self.scrollView = self.transform:Find("scroll_view"):GetComponent(ComponentName.UnityEngine_UI_ScrollRect)
+	--- @type UnityEngine_UI_Button
+	self.buttonReturn = self.transform:Find("popup/button_return"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_EventSystems_EventTrigger
+	self.eventTrigger = self.transform:Find("scroll_view"):GetComponent(ComponentName.UnityEngine_EventSystems_EventTrigger)
+	--- @type UnityEngine_RectTransform
+	self.bossIconAnchor = self.transform:Find("popup/boss_icon_anchor"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.localizeItemReward = self.transform:Find("popup/text_item_reward"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeEnemyTeam = self.transform:Find("popup/text_enemy_team"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeBattle = self.transform:Find("popup/battle_button/text_battle"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeRecord = self.transform:Find("popup/record_button/text_record"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeReturn = self.transform:Find("popup/button_return/text_return"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_Transform
+	self.towerWorld = self.transform:Find("tower_world_view")
+end

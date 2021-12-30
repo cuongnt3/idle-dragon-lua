@@ -1,0 +1,59 @@
+--- @class UIUnlockFeatureConfig
+UIUnlockFeatureConfig = Class(UIUnlockFeatureConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIUnlockFeatureConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Text
+	self.textFeature2 = self.transform:Find("text_mastery"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textFeature1 = self.transform:Find("main_menu_system_title/text_feature"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.iconNewFunction = self.transform:Find("main_menu_system_title/icon"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Button
+	self.buttonBg = self.transform:Find("popup_reward/back_ground_mo"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textNewFunctionContent = self.transform:Find("text_new_function_content"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textTitle = self.transform:Find("popup_reward/text_congratulation"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textTapToClose = self.transform:Find("tap_to_close/text_tap_to_close"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_GameObject
+	self.feature1 = self.transform:Find("main_menu_system_title").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconGuildNewFunction = self.transform:Find("effect_new_function_building_system/function_building_system/icon_guild_new_function").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconAncientTreeNewFunction = self.transform:Find("effect_new_function_building_system/function_building_system/icon_ancient_tree_new_function").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconDungeonNewFunction = self.transform:Find("effect_new_function_building_system/function_building_system/icon_dungeon_new_function").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconWheelOfFateNewFunction = self.transform:Find("effect_new_function_building_system/function_building_system/icon_wheel_of_fate_new_function").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconTavernNewFunction = self.transform:Find("effect_new_function_building_system/function_building_system/icon_tavern_new_function").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconSummonNewFunction = self.transform:Find("effect_new_function_building_system/function_building_system/icon_summon_new_function").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconRaidNewFunction = self.transform:Find("effect_new_function_building_system/function_building_system/icon_raid_new_function").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconArenaNewFunction = self.transform:Find("effect_new_function_building_system/function_building_system/icon_arena_new_function").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconTowerNewFunction = self.transform:Find("effect_new_function_building_system/function_building_system/icon_tower_new_function").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconSummonerMainMenu = self.transform:Find("effect_new_function_building_system/function_building_system/icon_summoner_main_menu").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconMasteryMainMenu = self.transform:Find("effect_new_function_building_system/function_building_system/icon_mastery_main_menu").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconHandOfMidas = self.transform:Find("effect_new_function_building_system/function_building_system/icon_hand_of_midas").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconRaiseMainMenu = self.transform:Find("effect_new_function_building_system/function_building_system/icon_raise_main_menu").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconRegression = self.transform:Find("effect_new_function_building_system/function_building_system/icon_regression").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconDefense = self.transform:Find("effect_new_function_building_system/function_building_system/icon_defense").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconDomains = self.transform:Find("effect_new_function_building_system/function_building_system/icon_domains").gameObject
+end

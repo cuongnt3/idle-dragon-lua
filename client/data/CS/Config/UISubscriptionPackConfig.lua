@@ -1,0 +1,59 @@
+--- @class UISubscriptionPackConfig
+UISubscriptionPackConfig = Class(UISubscriptionPackConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UISubscriptionPackConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonBuy = self.transform:Find("button_buy"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textPrice = self.transform:Find("button_buy/text_price"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.resAnchor = self.transform:Find("res_anchor"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.localizeBuy = self.transform:Find("button_buy/text_buy"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.tittle = self.transform:Find("tittle"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textNumberDays = self.transform:Find("remaining_days/text_number_days"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textLeftCoin = self.transform:Find("rewards_daily/each_day/reward_1/left_coin/text_left_coin"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textRightCoin = self.transform:Find("rewards_daily/total/reward_1/right_coin/text_right_coin"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textEachDay = self.transform:Find("rewards_daily/text_each_day"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textLogin = self.transform:Find("rewards_daily/text_login"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textFree = self.transform:Find("text_free_weekly"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonTrial = self.transform:Find("button_trial"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textBtnTrial = self.transform:Find("button_trial/text_btn_trial"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_GameObject
+	self.coverInstantReward = self.transform:Find("cover_instant_reward").gameObject
+	--- @type UnityEngine_GameObject
+	self.saleTag = self.transform:Find("sale_tag").gameObject
+	--- @type UnityEngine_UI_Text
+	self.textSaleOff = self.transform:Find("sale_tag/text_sale_off"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textSaleOffValue = self.transform:Find("sale_tag/text_sale_off_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.oldPrice = self.transform:Find("old_price"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textTotal = self.transform:Find("rewards_daily/text_total"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textUnlock = self.transform:Find("cover_instant_reward/text_unlock"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.eachDay = self.transform:Find("rewards_daily/each_day"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.total = self.transform:Find("rewards_daily/total"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_GameObject
+	self.plusEachDay = self.transform:Find("rewards_daily/plus_each_day").gameObject
+	--- @type UnityEngine_GameObject
+	self.plusTotal = self.transform:Find("rewards_daily/plus_total").gameObject
+end

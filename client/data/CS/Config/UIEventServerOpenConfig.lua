@@ -1,0 +1,53 @@
+--- @class UIEventServerOpenConfig
+UIEventServerOpenConfig = Class(UIEventServerOpenConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIEventServerOpenConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.backButton = self.transform:Find("safe_area/anchor_left/back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonHelp = self.transform:Find("safe_area/anchor_top/button_help"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textTitle = self.transform:Find("safe_area/anchor_top/event_pack_title/bg_text_glow/text_hero_name"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textEventEndIn = self.transform:Find("safe_area/anchor_top/event_pack_title/_duration_time/text_event_end_in"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.eventDayTab = self.transform:Find("event_day_tab"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_LoopVerticalScrollRect
+	self.scroll = self.transform:Find("loop_scroll"):GetComponent(ComponentName.UnityEngine_UI_LoopVerticalScrollRect)
+	--- @type UnityEngine_UI_HorizontalLayoutGroup
+	self.contentProgress = self.transform:Find("event_content/content"):GetComponent(ComponentName.UnityEngine_UI_HorizontalLayoutGroup)
+	--- @type UnityEngine_RectTransform
+	self.rectContent = self.transform:Find("event_content/content"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.textEventPoint = self.transform:Find("event_content/content/event_current_point/text_event_point"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_RawImage
+	self.iconHero = self.transform:Find("event_content/final_reward/icon_hero"):GetComponent(ComponentName.UnityEngine_UI_RawImage)
+	--- @type UnityEngine_UI_Text
+	self.textHeroName = self.transform:Find("event_content/final_reward/hero_title_name/text_hero_name"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textFinalReward = self.transform:Find("event_content/final_reward/final_reward_title/text_final_reward"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.iconFaction = self.transform:Find("event_content/final_reward/hero_title_name/icon_faction"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.iconStar = self.transform:Find("event_content/final_reward/hero_title_name/icon_star_demo"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_RectTransform
+	self.progressBar = self.transform:Find("event_content/content/event_current_point/bg_apple_progress_bar_1"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.textEventNextDay = self.transform:Find("event_bundle_duration/text_event_next_day"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_GameObject
+	self.itemRewardInfo = self.transform:Find("item_reward").gameObject
+	--- @type UnityEngine_UI_Button
+	self.bgButtonReward = self.transform:Find("item_reward/bg_button_reward"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.contentReward = self.transform:Find("item_reward/bg_list_reward/bg"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Image
+	self.bgFinalReward = self.transform:Find("event_content/final_reward/bg_final_reward"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.bgTextGlow = self.transform:Find("event_content/final_reward/hero_title_name/bg_text_glow"):GetComponent(ComponentName.UnityEngine_UI_Image)
+end

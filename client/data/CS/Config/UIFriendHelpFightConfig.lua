@@ -1,0 +1,59 @@
+--- @class UIFriendHelpFightConfig
+UIFriendHelpFightConfig = Class(UIFriendHelpFightConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIFriendHelpFightConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonRankingPoint = self.transform:Find("layout/ranking_point_button/bg_button_green"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonRankingReward = self.transform:Find("layout/ranking_reward_button/bg_button_green"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonTutorial = self.transform:Find("ask_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.bossFound = self.transform:Find("boss"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.glasses = self.transform:Find("scout"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_RawImage
+	self.bossView = self.transform:Find("icon_back_ground_help_fight"):GetComponent(ComponentName.UnityEngine_UI_RawImage)
+	--- @type UnityEngine_RectTransform
+	self.reward = self.transform:Find("boss/reward/weapon_slot"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.heroIconView = self.transform:Find("boss/boss/icon_boss"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.textNextScoutIn = self.transform:Find("scout/scout_and_text_next_scout/text_next_scout_in"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textNameHero = self.transform:Find("boss/boss/text_name_hero"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonScout = self.transform:Find("scout/scout_and_text_next_scout/scout_button/bg_button_red"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonBattle = self.transform:Find("boss/required_level_player_battle_smash/battle_button/bg_button_green"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonSmash = self.transform:Find("boss/required_level_player_battle_smash/smash_button/bg_button_red"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonRankingDamage = self.transform:Find("boss/boss/text_name_hero/bg_button_glass"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.moneyBarInfo = self.transform:Find("layout/money_bar_info"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.localizeRankingPoint = self.transform:Find("layout/ranking_point_button/bg_button_green/text_ranking_point"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeRankingReward = self.transform:Find("layout/ranking_reward_button/bg_button_green/text_ranking_reward"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeBattleReward = self.transform:Find("boss/reward/text_battle_reward"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeBattle = self.transform:Find("boss/required_level_player_battle_smash/battle_button/bg_button_green/text_battle"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeSmash = self.transform:Find("boss/required_level_player_battle_smash/smash_button/bg_button_red/text_auto"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeScout = self.transform:Find("scout/scout_and_text_next_scout/scout_button/bg_button_red/text_scout"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.bossHp = self.transform:Find("boss/boss/boss_hp"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.buttonFakeScout = self.transform:Find("scout/help_fight_random/icon_tavern_lock"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Image
+	self.iconFactionBoss = self.transform:Find("boss/boss/text_name_hero/icon_nature_filter"):GetComponent(ComponentName.UnityEngine_UI_Image)
+end

@@ -1,0 +1,53 @@
+--- @class UIGuildDungeonConfig
+UIGuildDungeonConfig = Class(UIGuildDungeonConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIGuildDungeonConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonInfo = self.transform:Find("safe_area/anchor_top/button_info"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.backButton = self.transform:Find("back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonSmash = self.transform:Find("safe_area/anchor_bottom/button_smash"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonBattle = self.transform:Find("safe_area/anchor_bottom/button_battle"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonLog = self.transform:Find("anchor_mid/button_log"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonSeasonReward = self.transform:Find("safe_area/anchor_top/button_season_reward"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.localizeBattle = self.transform:Find("safe_area/anchor_bottom/button_battle/text_battle"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeSmash = self.transform:Find("safe_area/anchor_bottom/button_smash/text_smash"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeSeasonReward = self.transform:Find("safe_area/anchor_top/button_season_reward/localizeSeasonReward"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.bossHp = self.transform:Find("anchor_mid/boss_hp"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.textSeasonStatus = self.transform:Find("anchor_mid/text_season_status"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textSeasonTimer = self.transform:Find("anchor_mid/text_season_status/text_season_timer"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.moneyBarInfo = self.transform:Find("safe_area/anchor_top/money_bar_info"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.textItemReward = self.transform:Find("safe_area/anchor_bottom/stage_reward_info/text_item_reward"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.rewardTableView = self.transform:Find("safe_area/anchor_bottom/stage_reward_info/text_item_reward/reward_table_view"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.defenderTeamAnchor = self.transform:Find("safe_area/anchor_bottom/defender_team_anchor"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.btnNextStage = self.transform:Find("anchor_mid/btn_next_stage"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.btnPreviousStage = self.transform:Find("anchor_mid/btn_previous_stage"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonCurrent = self.transform:Find("safe_area/anchor_bottom/button_current"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.localizeBackCurrent = self.transform:Find("safe_area/anchor_bottom/button_current/text_current"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_Transform
+	self.guildDungeonWorld = self.transform:Find("guild_dungeon_world")
+end

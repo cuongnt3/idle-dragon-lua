@@ -1,0 +1,85 @@
+--- @class UIHeroCollectionConfig
+UIHeroCollectionConfig = Class(UIHeroCollectionConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIHeroCollectionConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonBack = self.transform:Find("safe_area/back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttSort = self.transform:Find("popup/heroList/sort_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonSell = self.transform:Find("popup/heroList/sell_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonLock = self.transform:Find("popup/heroList/lock_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonDone = self.transform:Find("popup/heroList/button_ok"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textNumberHero = self.transform:Find("popup/text_title/text_number_hero"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_LoopVerticalScrollRect
+	self.scroll = self.transform:Find("popup/heroList/VerticalScroll_Grid"):GetComponent(ComponentName.UnityEngine_UI_LoopVerticalScrollRect)
+	--- @type UnityEngine_RectTransform
+	self.selectHero = self.transform:Find("popup/heroList/faction_filter/faction"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Image
+	self.imageSelect = self.transform:Find("popup/heroList/faction_filter/select"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_LoopVerticalScrollRect
+	self.scrollLinking = self.transform:Find("popup/linking/VerticalScroll_Grid_Linking"):GetComponent(ComponentName.UnityEngine_UI_LoopVerticalScrollRect)
+	--- @type UnityEngine_RectTransform
+	self.tabSelect = self.transform:Find("popup/tab"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.sortPannel = self.transform:Find("popup/heroList/sort_pannel"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonLevel = self.transform:Find("popup/heroList/sort_pannel/bg_filter_pannel/button_level"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonStar = self.transform:Find("popup/heroList/sort_pannel/bg_filter_pannel/button_star"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textTitle = self.transform:Find("popup/text_title"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeSort = self.transform:Find("popup/heroList/sort_button/text_sort"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeLevel = self.transform:Find("popup/heroList/sort_pannel/bg_filter_pannel/button_level/text_level"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeStar = self.transform:Find("popup/heroList/sort_pannel/bg_filter_pannel/button_star/text_star"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeSell = self.transform:Find("popup/heroList/sell_button/text_sort"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeEditLock = self.transform:Find("popup/heroList/text_edit_lock"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.safeArea = self.transform:Find("safe_area"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.bgClose = self.transform:Find("bg_close"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.localizeLock = self.transform:Find("popup/heroList/lock_button/text_lock"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeDone = self.transform:Find("popup/heroList/button_ok/text_sort"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.chooseButton = self.transform:Find("popup/heroList/sort_pannel/bg_filter_pannel/choose_button"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Button
+	self.multiEvolveButton = self.transform:Find("popup/heroList/multi_evolve_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.multiEvolveTxt = self.transform:Find("popup/heroList/multi_evolve_button/text_lock"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.pickHeroList = self.transform:Find("popup/linking/pick_hero_list"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_GameObject
+	self.linking = self.transform:Find("popup/linking").gameObject
+	--- @type UnityEngine_GameObject
+	self.heroList = self.transform:Find("popup/heroList").gameObject
+	--- @type UnityEngine_UI_Text
+	self.localizeSupportHero = self.transform:Find("popup/linking/pick_hero_list/Text"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_GameObject
+	self.notiLinking = self.transform:Find("popup/tab/tab2 (2)/notify").gameObject
+	--- @type UnityEngine_UI_Button
+	self.buttonAsk = self.transform:Find("popup/linking/button_ask"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.regression = self.transform:Find("popup/hero_regression_content"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_GameObject
+	self.softTutRegression = self.transform:Find("popup/tab/tab2 (3)/soft_tut (1)").gameObject
+	--- @type UnityEngine_GameObject
+	self.notyHeroList = self.transform:Find("popup/tab/tab2/notify").gameObject
+	--- @type UnityEngine_UI_Text
+	self.textEmpty = self.transform:Find("popup/text_empty"):GetComponent(ComponentName.UnityEngine_UI_Text)
+end

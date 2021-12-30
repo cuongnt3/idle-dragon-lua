@@ -1,0 +1,77 @@
+--- @class UIHeroSummonTableConfig
+UIHeroSummonTableConfig = Class(UIHeroSummonTableConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIHeroSummonTableConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonBasicSummon1 = self.transform:Find("basic_summoner/basic_summon/basic_buy_button/bg_button_green"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonBasicSummon10 = self.transform:Find("basic_summoner/basic_summon/basic_buy_button/bg_button_red"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonHeroicSummon1 = self.transform:Find("heroic_summoner/heroic_summon/basic_buy_button/bg_button_green"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonHeroicSummon10 = self.transform:Find("heroic_summoner/heroic_summon/basic_buy_button/bg_button_red"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonFriendshipSummon1 = self.transform:Find("friendly_summoner/friendly_summon/basic_buy_button/bg_button_green"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonFriendshipSummon10 = self.transform:Find("friendly_summoner/friendly_summon/basic_buy_button/bg_button_red"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textBasicSummonFree = self.transform:Find("basic_summoner/basic_summon/basic_buy_button/bg_button_green/text_Free"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textHeroicSummonFree = self.transform:Find("heroic_summoner/heroic_summon/basic_buy_button/bg_button_green/text_free"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textBasicTime = self.transform:Find("basic_summoner/basic_summon/basic_buy_button/Image/text_free_refesh"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textHeroicTime = self.transform:Find("heroic_summoner/heroic_summon/basic_buy_button/Image (1)/text_free_refesh"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textPriceBasicSummon1 = self.transform:Find("basic_summoner/basic_summon/basic_buy_button/bg_button_green/GameObject/summon_scroll_value/text_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textPriceBasicSummon10 = self.transform:Find("basic_summoner/basic_summon/basic_buy_button/bg_button_red/summon_scroll_value/text_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textPriceHeroicSummon1 = self.transform:Find("heroic_summoner/heroic_summon/basic_buy_button/bg_button_green/GameObject/summon_scroll_value/text_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textPriceHeroicSummon10 = self.transform:Find("heroic_summoner/heroic_summon/basic_buy_button/bg_button_red/summon_scroll_value/text_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textPriceFriendSummon1 = self.transform:Find("friendly_summoner/friendly_summon/basic_buy_button/bg_button_green/summon_scroll_value/text_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textPriceFriendSummon10 = self.transform:Find("friendly_summoner/friendly_summon/basic_buy_button/bg_button_red/summon_scroll_value/text_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.textNumberBasicScroll = self.transform:Find("basic_summoner/basic_summon/money_bar_info"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.textNumberHeroicScroll = self.transform:Find("heroic_summoner/heroic_summon/money_bar_info"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.textNumberFriendPoint = self.transform:Find("friendly_summoner/friendly_summon/money_bar_info"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.basicSummoner = self.transform:Find("basic_summoner"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.heroicSummoner = self.transform:Find("heroic_summoner"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_RectTransform
+	self.friendlySummoner = self.transform:Find("friendly_summoner"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_GameObject
+	self.basicScroll = self.transform:Find("basic_summoner/basic_summon/basic_buy_button/bg_button_green/GameObject").gameObject
+	--- @type UnityEngine_GameObject
+	self.heroicScroll = self.transform:Find("heroic_summoner/heroic_summon/basic_buy_button/bg_button_green/GameObject").gameObject
+	--- @type DG_Tweening_DOTweenAnimation
+	self.iconHeroicSummoner = self.transform:Find("heroic_summoner/icon_heroic_summon_book"):GetComponent(ComponentName.DG_Tweening_DOTweenAnimation)
+	--- @type DG_Tweening_DOTweenAnimation
+	self.iconBasicSummoner = self.transform:Find("basic_summoner/icon_basic_summon_book"):GetComponent(ComponentName.DG_Tweening_DOTweenAnimation)
+	--- @type DG_Tweening_DOTweenAnimation
+	self.iconFriendlySummoner = self.transform:Find("friendly_summoner/icon_friendly_summon_book"):GetComponent(ComponentName.DG_Tweening_DOTweenAnimation)
+	--- @type UnityEngine_UI_Image
+	self.iconBasicScroll1 = self.transform:Find("basic_summoner/basic_summon/basic_buy_button/bg_button_green/GameObject/summon_scroll_value/icon_basic_scroll"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.iconBasicScroll10 = self.transform:Find("basic_summoner/basic_summon/basic_buy_button/bg_button_red/summon_scroll_value/icon_basic_scroll"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.iconHeroicScroll1 = self.transform:Find("heroic_summoner/heroic_summon/basic_buy_button/bg_button_green/GameObject/summon_scroll_value/icon_basic_scroll"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.iconHeroicScroll10 = self.transform:Find("heroic_summoner/heroic_summon/basic_buy_button/bg_button_red/summon_scroll_value/icon_basic_scroll"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.iconFriendshipScroll1 = self.transform:Find("friendly_summoner/friendly_summon/basic_buy_button/bg_button_green/summon_scroll_value/icon_basic_scroll"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.iconFriendshipScroll10 = self.transform:Find("friendly_summoner/friendly_summon/basic_buy_button/bg_button_red/summon_scroll_value/icon_basic_scroll"):GetComponent(ComponentName.UnityEngine_UI_Image)
+end

@@ -1,0 +1,59 @@
+--- @class UITavernQuestConfig
+UITavernQuestConfig = Class(UITavernQuestConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UITavernQuestConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonSpeedUp = self.transform:Find("visual/speed_up_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonFree = self.transform:Find("visual/free_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonStart = self.transform:Find("visual/start_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonComplete = self.transform:Find("visual/complete_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonLock = self.transform:Find("visual/button_tavern_lock"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonClose = self.transform:Find("visual/progress_bar/button_close_tavern_quest"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textQuest = self.transform:Find("visual/text_tavern_quest_name"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textQuestComplete = self.transform:Find("visual/text_tavern_quest_complete"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.star = self.transform:Find("visual/icon_star_orange_tavern"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_GameObject
+	self.autoTime = self.transform:Find("visual/progress_bar").gameObject
+	--- @type UnityEngine_UI_Text
+	self.textQuestTime = self.transform:Find("visual/text_tavern_quest_time"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.bgTimeProcess = self.transform:Find("visual/progress_bar/bg_quest_progress_bar_2"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_GameObject
+	self.bgTimeProcessFull = self.transform:Find("visual/progress_bar/bg_quest_progress_bar_1").gameObject
+	--- @type UnityEngine_UI_Text
+	self.textAutoTime = self.transform:Find("visual/progress_bar/text_quest_progress"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.item = self.transform:Find("visual/item"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_GameObject
+	self.iconUnlock = self.transform:Find("visual/button_tavern_lock/icon_unlock").gameObject
+	--- @type UnityEngine_GameObject
+	self.iconLock = self.transform:Find("visual/button_tavern_lock/icon_lock").gameObject
+	--- @type UnityEngine_UI_Text
+	self.textGemSpeedUp = self.transform:Find("visual/speed_up_button/text_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeSpeedUp = self.transform:Find("visual/speed_up_button/text_speed_up"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeFree = self.transform:Find("visual/free_button/text_complete"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeStart = self.transform:Find("visual/start_button/text_complete"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeComplete = self.transform:Find("visual/complete_button/text_complete"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_Animation
+	self.anim = self.transform:Find(""):GetComponent(ComponentName.UnityEngine_Animation)
+	--- @type UnityEngine_RectTransform
+	self.visual = self.transform:Find("visual"):GetComponent(ComponentName.UnityEngine_RectTransform)
+end

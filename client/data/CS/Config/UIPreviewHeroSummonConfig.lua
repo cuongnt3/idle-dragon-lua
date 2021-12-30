@@ -1,0 +1,51 @@
+--- @class UIPreviewHeroSummonConfig
+UIPreviewHeroSummonConfig = Class(UIPreviewHeroSummonConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIPreviewHeroSummonConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_Transform
+	self.heroAnchor = self.transform:Find("bg/book/hero_anchor")
+	--- @type Spine_Unity_SkeletonAnimation
+	self.scrollAnim = self.transform:Find("bg/scroll"):GetComponent(ComponentName.Spine_Unity_SkeletonAnimation)
+	--- @type UnityEngine_SpriteRenderer
+	self.bg = self.transform:Find("bg"):GetComponent(ComponentName.UnityEngine_SpriteRenderer)
+	--- @type UnityEngine_GameObject
+	self.bookAnchor = self.transform:Find("bg/book").gameObject
+	--- @type UnityEngine_Camera
+	self.camera = self.transform:Find("camera"):GetComponent(ComponentName.UnityEngine_Camera)
+	--- @type UnityEngine_Transform
+	self.bgBlurSummon = self.transform:Find("bg/bg_blur_summon")
+	--- @type UnityEngine_GameObject
+	self.scroll = self.transform:Find("bg/scroll").gameObject
+	--- @type UnityEngine_GameObject
+	self.canvasFrontBattle = self.transform:Find("bg/book/hero_anchor/canvas_front_battle").gameObject
+	--- @type UnityEngine_GameObject
+	self.canvasBackground = self.transform:Find("bg/book/hero_anchor/canvas_background").gameObject
+	--- @type UnityEngine_GameObject
+	self.summonRespawnCard = self.transform:Find("bg/book/hero_anchor/canvas_front_battle/summon_respawn_card").gameObject
+	--- @type UnityEngine_GameObject
+	self.summonSpawnHero = self.transform:Find("bg/book/hero_anchor/canvas_front_battle/fx_summon_spawn_hero").gameObject
+	--- @type UnityEngine_GameObject
+	self.fxSummonFront = self.transform:Find("bg/book/hero_anchor/canvas_front_battle/fx_summon_front").gameObject
+	--- @type UnityEngine_GameObject
+	self.fxSummonAfter = self.transform:Find("bg/book/hero_anchor/canvas_background/fx_summon_after").gameObject
+	--- @type UnityEngine_GameObject
+	self.changeHeroSummoned = self.transform:Find("bg/book/hero_anchor/canvas_front_battle/change_hero_summoned").gameObject
+	--- @type UnityEngine_GameObject
+	self.fxSummonOneSpecial = self.transform:Find("bg/book/hero_anchor/canvas_front_battle/fx_summon_spawn_hero_5").gameObject
+	--- @type UnityEngine_GameObject
+	self.fxSummon10 = self.transform:Find("bg/book/hero_anchor/canvas_front_battle/fx_summon10_hero").gameObject
+	--- @type UnityEngine_GameObject
+	self.fxSummon10Special = self.transform:Find("bg/book/hero_anchor/canvas_front_battle/fx_summon10_hero_5").gameObject
+	--- @type UnityEngine_GameObject
+	self.fxSummonOne = self.transform:Find("bg/book/hero_anchor/canvas_front_battle/fx_summon_spawn_hero").gameObject
+	--- @type UnityEngine_GameObject
+	self.fxSummonSpawnHero5Rare = self.transform:Find("bg/book/hero_anchor/canvas_front_battle/fx_summon_spawn_hero_5_rare").gameObject
+	--- @type UnityEngine_GameObject
+	self.fxSummon10Hero5Rare = self.transform:Find("bg/book/hero_anchor/canvas_front_battle/fx_summon10_hero_5_rare").gameObject
+end

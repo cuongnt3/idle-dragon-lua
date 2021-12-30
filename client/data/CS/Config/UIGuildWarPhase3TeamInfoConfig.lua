@@ -1,0 +1,59 @@
+--- @class uiGuildWarPhase3TeamInfoConfig
+uiGuildWarPhase3TeamInfoConfig = Class(uiGuildWarPhase3TeamInfoConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function uiGuildWarPhase3TeamInfoConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonClose = self.transform:Find("popup/button_close"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textName = self.transform:Find("popup/text_name"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.bgNone = self.transform:Find("bg_none"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonBattle = self.transform:Find("popup/button_battle"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textApValue = self.transform:Find("popup/team_info/text_ap_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.playerName = self.transform:Find("popup/team_info/player_name"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.defenderTeamAnchor = self.transform:Find("popup/team_info/defender_team_anchor"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Image
+	self.towerImage = self.transform:Find("popup/team_info/guild_war_defense_world_base/tower_image"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_RectTransform
+	self.barPercent = self.transform:Find("popup/team_info/guild_war_defense_world_base/bar_percent"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Text
+	self.textSlotIndex = self.transform:Find("popup/team_info/guild_war_defense_world_base/tag_slot/text_slot_index"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_LoopVerticalScrollRect
+	self.recordScroll = self.transform:Find("popup/record_scroll"):GetComponent(ComponentName.UnityEngine_UI_LoopVerticalScrollRect)
+	--- @type UnityEngine_GameObject
+	self.loading = self.transform:Find("popup/loading").gameObject
+	--- @type UnityEngine_GameObject
+	self.empty = self.transform:Find("popup/empty").gameObject
+	--- @type UnityEngine_UI_Text
+	self.textEmpty = self.transform:Find("popup/empty/text_empty"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textCondition1 = self.transform:Find("popup/medals_rule/medals_1/text_rule_content"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textCondition2 = self.transform:Find("popup/medals_rule/medals_2/text_rule_content"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textCondition3 = self.transform:Find("popup/medals_rule/medals_3/text_rule_content"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textRewardCondition1 = self.transform:Find("popup/medals_rule/medals_1/text_guild_war_medals_point"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textRewardCondition2 = self.transform:Find("popup/medals_rule/medals_2/text_guild_war_medals_point"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textRewardCondition3 = self.transform:Find("popup/medals_rule/medals_3/text_guild_war_medals_point"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_GameObject
+	self.opponentFrag = self.transform:Find("popup/team_info/guild_war_defense_world_base/tag_slot/opponent_frag").gameObject
+	--- @type UnityEngine_GameObject
+	self.allyFrag = self.transform:Find("popup/team_info/guild_war_defense_world_base/tag_slot/ally_frag").gameObject
+	--- @type UnityEngine_UI_Image
+	self.bgBossHp = self.transform:Find("popup/team_info/guild_war_defense_world_base/bar_percent/rect_percent/bg_boss_hp"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.iconAp = self.transform:Find("popup/team_info/text_ap_value/icon_ap"):GetComponent(ComponentName.UnityEngine_UI_Image)
+end

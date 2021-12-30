@@ -1,0 +1,49 @@
+--- @class UIGuildWarSetupConfig
+UIGuildWarSetupConfig = Class(UIGuildWarSetupConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function UIGuildWarSetupConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.backButton = self.transform:Find("back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.tittleMessageSetup = self.transform:Find("popup_foxy/tittle_message_setup"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.messageSetup = self.transform:Find("popup_foxy/message_setup"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonSort = self.transform:Find("popup_setup/button_sort"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonNext = self.transform:Find("popup_setup/button_next"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonPrev = self.transform:Find("popup_setup/button_prev"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonInfo = self.transform:Find("popup_setup/button_info"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.pageMember = self.transform:Find("popup_setup/page_member"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_LoopVerticalScrollRect
+	self.tableMember = self.transform:Find("popup_setup/table_member"):GetComponent(ComponentName.UnityEngine_UI_LoopVerticalScrollRect)
+	--- @type UnityEngine_GameObject
+	self.popupSetup = self.transform:Find("popup_setup").gameObject
+	--- @type UnityEngine_RectTransform
+	self.popupFoxy = self.transform:Find("popup_foxy"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_UI_Button
+	self.buttonSave = self.transform:Find("button_save"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.sortPannel = self.transform:Find("popup_setup/sort_pannel"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.textLevel = self.transform:Find("popup_setup/sort_pannel/bg_filter_pannel/button_level/text_level"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textCp = self.transform:Find("popup_setup/sort_pannel/bg_filter_pannel/button_power/text_cp"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textSort = self.transform:Find("popup_setup/button_sort/text_sort"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Button
+	self.buttonPower = self.transform:Find("popup_setup/sort_pannel/bg_filter_pannel/button_power"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonLevel = self.transform:Find("popup_setup/sort_pannel/bg_filter_pannel/button_level"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonLeaderboard = self.transform:Find("popup_setup/button_leaderboard"):GetComponent(ComponentName.UnityEngine_UI_Button)
+end

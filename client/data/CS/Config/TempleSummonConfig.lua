@@ -1,0 +1,59 @@
+--- @class TempleSummonConfig
+TempleSummonConfig = Class(TempleSummonConfig)
+
+--- @return void
+--- @param transform UnityEngine_Transform
+function TempleSummonConfig:Ctor(transform)
+	--- @type UnityEngine_GameObject
+	self.gameObject = transform.gameObject
+	--- @type UnityEngine_Transform
+	self.transform = transform.transform
+	--- @type UnityEngine_UI_Button
+	self.buttonArrowRight = self.transform:Find("anchor_mid/icon_arrow_ancient_next"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonArrowLeft = self.transform:Find("anchor_mid/icon_arrow_ancient_back"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonTutorial = self.transform:Find("safe_area/anchor_top/bg_button_glass"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonInfo = self.transform:Find("safe_area/anchor_top/bg_button_glass"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonBack = self.transform:Find("safe_area/back_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Text
+	self.cover = self.transform:Find("cover"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textStoneName = self.transform:Find("anchor_mid/orb_title_name/text_name_character"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textPriceSummon1 = self.transform:Find("safe_area/anchor_bottom/summon_button_1/coin_currency/text_coin_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.textPriceSummon10 = self.transform:Find("safe_area/anchor_bottom/summon_button_10/coin_currency/text_coin_value"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Image
+	self.iconSummon1 = self.transform:Find("safe_area/anchor_bottom/summon_button_1/coin_currency/icon_ancient_relic"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.iconSummon10 = self.transform:Find("safe_area/anchor_bottom/summon_button_10/coin_currency/icon_ancient_relic"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Button
+	self.buttonSummon1 = self.transform:Find("safe_area/anchor_bottom/summon_button_1"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonSummon10 = self.transform:Find("safe_area/anchor_bottom/summon_button_10"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_UI_Button
+	self.buttonReplace = self.transform:Find("safe_area/anchor_bottom/replace_hero_button"):GetComponent(ComponentName.UnityEngine_UI_Button)
+	--- @type UnityEngine_RectTransform
+	self.moneyBarAnchor = self.transform:Find("safe_area/anchor_top/money_bar_root"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_GameObject
+	self.renderer = self.transform:Find("renderer").gameObject
+	--- @type UnityEngine_UI_Text
+	self.localizeSummon = self.transform:Find("safe_area/anchor_bottom/summon_button_1/text_forge"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeSummon10 = self.transform:Find("safe_area/anchor_bottom/summon_button_10/text_forge"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_UI_Text
+	self.localizeReplaceHero = self.transform:Find("safe_area/anchor_bottom/replace_hero_button/text_replace_hero"):GetComponent(ComponentName.UnityEngine_UI_Text)
+	--- @type UnityEngine_RectTransform
+	self.safeArea = self.transform:Find("safe_area"):GetComponent(ComponentName.UnityEngine_RectTransform)
+	--- @type UnityEngine_Transform
+	self.previewTempleSummon = self.transform:Find("preview_temple_summon")
+	--- @type UnityEngine_UI_Image
+	self.bgHeroTitleDetail1 = self.transform:Find("anchor_mid/orb_title_name/text_name_character/bg_hero_title_detail_1"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.bgHeroTitleDetail2 = self.transform:Find("anchor_mid/orb_title_name/text_name_character/bg_hero_title_detail_1 (1)"):GetComponent(ComponentName.UnityEngine_UI_Image)
+	--- @type UnityEngine_UI_Image
+	self.glow = self.transform:Find("anchor_mid/orb_title_name/character_title_detail/bg_hero_name_title"):GetComponent(ComponentName.UnityEngine_UI_Image)
+end
